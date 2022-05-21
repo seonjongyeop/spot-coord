@@ -128,11 +128,11 @@ kakao.maps.event.addListener(map, 'rightclick', function (mouseEvent) {
         var path_copy = polygon.getPath();
         for (step = 0; step < path_copy.length; step++){
             array_corrd = String(path_copy[step]).replace('(', '').replace(')', '');     
-            path_copy[step] = '(' + step + ', ' + array_corrd + ')\n';
+            path_copy[step] = '[' + step + ', ' + array_corrd + ']';
         }
         var message = path_copy;
         var resultDiv = document.getElementById('clickLatlng');
-        resultDiv.innerHTML = message;
+        resultDiv.innerHTML = '[' + message + ']';
 
         if (path.length > 2) {
             
